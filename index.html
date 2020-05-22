@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="favicon.ico"><title>Welcome</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+        
+	
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+
+	
+	
+</head>
+<body onload="myFunction()" style="background-color: #34495e;">
+        <div id="loader"></div>
+    <div id="home-loader" class="animate-bottom">
+	 	<nav>
+            <div class="header-length">
+                <a href="#" class="logo"><img src="logo.png" alt="HSL|Help Street Life"></a>
+                <i class="menu-toggle-btn fas fa-grip-lines"></i>
+                <div class="nav-menu">
+                    <a href="#" class="active"><i class="fas fa-home home"></i>Home</a>
+                    <a href="../team/index.html" ><i class="fas fa-users team"></i>Team</a>
+                    <a href="#"><i class="fab fa-blogger blog"></i>Blog</a>
+                    <a href="#"><i class="fas fa-user-plus involve"></i>Get Involve</a>
+                    <a href="#"><i class="fas fa-sign-in-alt sign"></i>Sign In</a>
+                </div>
+            </div>
+        </nav>
+
+		<div class="sec1">
+            <div class="moto">
+                <h2>Help Street Life is a volunteer group commited to helping, makeing life more comfortable and contributing to the mission <p> <em>#HungerSaver</em></p>  </h2>
+            </div>
+    
+            <div class="donate">
+                <input type="button" class="but butcolor" value="Donate" ></a>
+            </div>
+        </div>
+
+        <div class="purpose">
+            <h2>PURPOSE</h2>
+            <p>
+                We will reduce the food wastage using our web application, where the users didn’t require calling or contacting or filling up details to any particular NGO. In our online portal the users will be able to signing up to be a food donor. They can posts the details regarding the quantity of food or may request for food, to donate. Based on the user’s location, our web application will automatically send notification message to the nearest NGO. Even the users get notified when organization such as food bank or any NGO need donors. The organizations can also signup to create post and events that quickly notify donors nearby. We will also analyze the user and organizations data and retrieve an analyzed results regarding percentage of food wastage within an area which not only aware people from food wastage, but provides the success rate feeding poor hungry people.
+            </p>  
+        </div>
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+              <q>While millions suffer from hunger and ignorance, I hold every person a traitor who, having been educated at their expense, pays not the slightest attention to them.</q>
+              <p class="author">- Swami Vivekananda</p>
+            </div>
+            
+            <div class="mySlides">
+              <q>Close to a billion people – one-eighth of the world’s population – still live in hunger. Each year 2 million children die through malnutrition. This is happening at a time when doctors in Britain are warning of the spread of obesity. We are eating too much while others starve</q>
+              <p class="author">- Jonathan Sacks</p>
+            </div>
+            
+            <div class="mySlides">
+              <q>I never look at the masses as my responsibility. I look at the individual. I can love only one person at a time. I can feed only one person at a time. Just one, one, one.</q>
+              <p class="author">- Mother Teresa</p>
+            </div>
+            <div class="mySlides">
+              <q>Like slavery and apartheid, poverty is not natural. It is man-made and it can be overcome and eradicated by the action of human beings.</q>
+              <p class="author">- Nelson Mandela</p>
+            </div>
+            <div class="mySlides">
+              <q>Education is the best weapon we have to fight poverty, ignorance and terrorism.</q>
+              <p class="author">- Malala Yousafzai</p>
+            </div>
+            <div class="mySlides">
+              <q>There’s enough on this planet for everyone’s needs but not for everyone’s greed.</q>
+              <p class="author">- Mohandas Karamchand Gandhi</p>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            
+            
+                <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+        </div>
+	
+	
+	</div>
+	<script>
+
+        function myFunction() {
+            var myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("home-loader").style.display = "block";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        }
+        $(window).on('scroll', function() {
+        if($(window).scrollTop()) {
+            $('nav').addClass('black');
+        }
+        else{
+            $('nav').removeClass('black');
+        }
+    })
+    $(".menu-toggle-btn").click(function(){
+         $(this).toggleClass("fa-times");
+         $(".nav-menu").toggleClass("active");
+        })
+     
+    </script>
+</body>
+</html>
